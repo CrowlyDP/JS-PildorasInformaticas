@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #primerParrafo{
+            background-color: red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+        //El primer parametro apunta a la propiedad css.
+        //El segundo parametro apunta al valor que vamos cambiar
+        // $("#primerParrafo").css("background-color","yellow");
+
+        // Varios parametros si la propiedad css lo permite
+        $("p.destacado").css("border","2px dotted blue");
+        });
+
+    </script>
+</head>
+<body>
+    <p id="primerParrafo">Primer parrafo</p>
+    <p class="destacado">Parrafo destacado</p>
+    <p >Tercer parrafo</p>
+</body>
+</html>

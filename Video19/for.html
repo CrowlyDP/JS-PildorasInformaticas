@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*for(var i=0;i<10;i++){
+            document.write("<p> Bucle: " + i + "</p>");
+        }*/
+
+        /*var array_ano=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+ 
+        for(var j=0 ; j<array_ano.length ; j++){
+
+        document.write("<p>" + array_ano[j] + "</p>");
+        }*/
+
+        //inicamos el bucle vacío
+        var trabajadores=new Array();
+        var persona="";
+        var contador=0;
+
+        while(persona!="salir"){
+            persona=prompt("Introduce trabajador");
+
+            trabajadores[contador]=persona;
+            contador++;
+        }
+        trabajadores.pop(); //Borramos la palabra salir
+        for(var i=0;i<trabajadores.length; i++){
+            document.write(trabajadores[i] + "<br/>");
+        }
+    </script>
+ 
+</head>
+<body>
+
+</body>
+</html>

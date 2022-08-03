@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 200px;
+            height: 120px;
+        }
+        #banner{
+            background-color: red;
+            width: 450px;
+            height: 300px;
+            position:absolute;
+            left: 300px;
+            top: 50px;
+            font-size: 30px;
+            text-align: center;
+        }
+        #boton1, #boton2,#boton3,#boton4{
+            width: 200px;
+            height: 120px;
+            font-size: 30px;
+
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>
+        
+        $(document).ready(function(){
+
+            // var z=document.getElementById("cerrar");
+            // z.addEventListener("click", cerrarBanner, false);
+
+            document.getElementById("cerrar").addEventListener("click",cerrarBanner, false);
+            /*document.getElementById("boton1").addEventListener("click", carrito, false);
+            document.getElementById("boton2").addEventListener("click", carrito, false);
+            document.getElementById("boton3").addEventListener("click", carrito, false);
+            document.getElementById("boton4").addEventListener("click", carrito, false); */
+            
+            var botones=document.querySelectorAll("#coleccion button");
+            for(var i=0; i<botones.length; i++){
+                botones[i].addEventListener("click",carrito,false);
+            }
+        });
+        function cerrarBanner(){
+            $("#banner").remove();
+        }
+        function carrito(e){
+            if(e.target==boton1){
+                $("#boton1").replaceWith("<div id='boton1'>Agregado al carro</div>");
+            }
+            if(e.target==boton2){
+                $("#boton2").replaceWith("<div id='boton2'>Agregado al carro</div>");
+
+            }
+            if(e.target==boton3){
+                $("#boton3").replaceWith("<div id='boton3'>Agregado al carro</div>");
+
+            }
+            if(e.target==boton4){
+                $("#boton4").replaceWith("<div id='boton4'>Agregado al carro</div>");
+
+            }
+        }
+
+    </script>
+    
+</head>
+<body>
+    <div id="banner">
+        BANNER DE PRUEBA
+    <p id="cerrar">Cerrar</p>
+    </div>
+
+    <div id="coleccion">
+    <button id="boton1">1</button>
+    <button id="boton2">2</button>
+    <button id="boton3">3</button>
+    <button id="boton4">4</button>
+    </div>
+</body>
+</html>

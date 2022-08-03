@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .micontenedor{
+            background-color: rgb(54, 214, 33);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+
+    function validar(){
+        var nUsuario=document.getElementById("usuario").value;
+        if(nUsuario==""){
+            $("#usuario").after("Rellena este campo");
+        }
+    }
+
+    </script>
+</head>
+<body>
+   <form action="" method="get">
+
+    <input name="" type="text" id="usuario"><br/><br/>
+    <input name="" type="text"><br/><br/>
+    <input name="" type="text"><br/><br/>
+
+    <input name="" type="button" value="OK" onclick="validar()">
+   </form>
+</body>
+</html>

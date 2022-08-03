@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+
+        document.getElementById("img1").addEventListener("mouseover",cambiar,false);
+        document.getElementById("img1").addEventListener("mouseout",restaurar,false);
+    });
+
+    function cambiar(){
+        $("img").attr("src","https://img.freepik.com/premium-vector/all-seeing-eye-god-sacred-geometry-triangle-masonry-illuminati-symbol-vector-logo-emblem-design-element_570429-3813.jpg");
+    }
+    function restaurar(){
+        $("img").attr("src","https://as1.ftcdn.net/v2/jpg/03/13/44/50/1000_F_313445088_jI8qTKW7JwfBH989oo692caXSyWIVnD4.jpg");
+    }
+</script>
+</head>
+<body>
+    <img src="https://as1.ftcdn.net/v2/jpg/03/13/44/50/1000_F_313445088_jI8qTKW7JwfBH989oo692caXSyWIVnD4.jpg" id="img1">
+
+
+
+</body>
+</html>

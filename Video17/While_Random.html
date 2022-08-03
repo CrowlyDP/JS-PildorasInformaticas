@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+    var numeroAleatorio=Math.round(Math.random()*100);
+    alert(numeroAleatorio);
+
+    var minum=0, intentos=0;
+
+        do{
+            minum=prompt("Introduce un numero entre 1 y 100");
+
+            if(numeroAleatorio>minum){
+                document.write("mas alto" + "<br/>");
+            }
+            if(numeroAleatorio<minum){
+                ("mas bajo" + "<br/>");
+            }
+            intentos++;
+        }while(numeroAleatorio!=minum);
+        document.write("Correcto. Has realizado " + intentos + " intentos");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
