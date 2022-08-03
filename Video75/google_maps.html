@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Google Maps</title>
+<style>
+
+#mapa h2 {
+	color: black;
+}
+#mapa p {
+	color: black;	
+}
+
+#mapa {
+	
+	height:400px;
+	width:760px;
+
+}
+body{
+	background-color: blue;
+	
+}
+h1{
+	font-weight: bold;
+	color: white;
+}
+p{
+	font-weight: bold;
+	text-align: center;
+	font-size: 50px;
+	color: orange;
+}
+</style>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=#API_KEY#"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="jquery.gomap-1.3.2.min.js"></script>
+
+<script>
+
+	$(document).ready(function() {
+		
+		$("#mapa").goMap({
+
+			latitude:42.1359063,
+			longitude:-0.4058484,
+			zoom: 14,
+			maptype:"TERRAIN", //SATELLITE || TERRAIN
+			scaleControl:true
+		});
+		$.goMap.createMarker({
+
+			latitude:42.1359063,
+			longitude:-0.4058484,
+			title:"Capital Mundial",
+			html:{
+				content:"<h2> La Capital Mundial</h2>",
+				popup:true
+			}
+		});
+
+		
+	}); 
+
+</script>
+
+</head>
+<body>
+
+	<div class="cabecera">
+		<p class="logo">Mapas</p>
+	</div>
+	<div class="contenido">
+		<div class="principal">
+			<h1>Google Maps</h1>
+            
+            <div id="mapa"></div>
+
+		</div>
+	</div>
+	
+
+</body>
+</html>
